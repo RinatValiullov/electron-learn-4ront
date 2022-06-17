@@ -1,0 +1,20 @@
+{
+  "name": "quick-start",
+  "version": "1.0.0",
+  "description": "Hello World App in Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "javascript",
+    "electron",
+    "web",
+    "desktop"
+  ],
+  "author": "4rontender <4rontender@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.4"
+  }
+}

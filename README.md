@@ -1,2 +1,1 @@
-# electron-learn-4ront
-Learn Electron framework
+# Learn Electron framework
