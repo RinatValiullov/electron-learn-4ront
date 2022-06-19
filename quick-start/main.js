@@ -1,5 +1,5 @@
 const path = require("path");
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -8,6 +8,12 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, "preload.js")
     }
+  });
+
+  ipcMain.on("set-title", (event, title) => {
+    const webContents = event.sender;
+    const wind = BrowserWindow.fromWebContents(webContents);
+    wind.setTitle(title);
   });
 
   win.loadFile("index.html");
